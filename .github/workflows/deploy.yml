@@ -11,6 +11,6 @@ jobs:
       - run: flyctl secrets set TAILSCALE_AUTH_KEY=${{ secrets.TAILSCALE_AUTH_KEY }} || true
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
-      - run: flyctl deploy --remote-only --now --copy-config --name test-tailscale --region nrt
+      - run: flyctl deploy --remote-only --now --name test-tailscale --region nrt
         env:
           FLY_API_TOKEN: ${{ secrets.FLY_API_TOKEN }}
